@@ -19,22 +19,5 @@ export default class SignaltvPlugin extends FlexPlugin {
    */
   async init(flex, manager) {
     flex.MessageInput.Content.add(<CannedResponses key="canned-responses" />);
-
-    const configuration = {
-      theme: {
-        overrides: {
-          MainHeader: {
-            Container: {
-              backgroundImage:
-                'url(https://rose-gaur-9610.twil.io/assets/nav-logo.svg), url(https://rose-gaur-9610.twil.io/assets/navL-SignalBlue-Left.svg), url(https://rose-gaur-9610.twil.io/assets/navL-SignalBlue-Right.svg)',
-              backgroundPosition: 'center center, left center, right center',
-              backgroundRepeat: 'no-repeat',
-            },
-          },
-        },
-      },
-    };
-
-    manager.updateConfig(configuration);
   }
 }
